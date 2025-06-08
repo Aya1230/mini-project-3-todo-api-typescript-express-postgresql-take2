@@ -1,7 +1,9 @@
 export interface Todo {
   id: string;
   title: string;
-  description: string;
-  completed: boolean;
+  description?: string;
+  completed?: boolean;
 }
-//This is my Todo "blueprint" 
+
+export type CreateTodo = Omit<Todo, "id">;
+export type UpdateTodo = Partial<CreateTodo>;

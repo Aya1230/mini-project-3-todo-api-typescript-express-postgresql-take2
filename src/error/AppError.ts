@@ -5,8 +5,5 @@ export class AppError extends Error {
   constructor(message: string, statusCode: number) {
     super(message); // Set the error message from the parent class
     this.statusCode = statusCode; // Store HTTP status code
-
-    // Optional: capture the exact location where the error happened
-    Error.captureStackTrace(this, this.constructor);
   }
 }
